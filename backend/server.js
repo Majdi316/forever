@@ -1,6 +1,7 @@
 //TODO Libraries
 import express from "express";
 import cors from "cors";
+
 import "dotenv/config";
 //TODO Pages
 import connectDB from "./config/mongodb.js";
@@ -13,7 +14,7 @@ import orderRouter from "./routes/orderRoute.js";
 // App Config
 const app = express();
 const port = process.env.PORT || 4000;
-
+app.use(cors());
 //connect to DB
 connectDB();
 
@@ -22,7 +23,6 @@ connectCloudinary();
 
 // middlewares
 app.use(express.json());
-app.use(cors());
 
 //api endpoints
 

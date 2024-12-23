@@ -10,7 +10,7 @@ const Login = ({ setToken }) => {
   const onSubmitHandler = async (e) => {
     try {
       e.preventDefault();
-      const response = await request.post("/api/user/admin", {
+      const response = await axios.post("https://forever-server-3-ikm5yxl0f-majdis-projects-845b67bc.vercel.app/api/user/admin", {
         email,
         password,
       });

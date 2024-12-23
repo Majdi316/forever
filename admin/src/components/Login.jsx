@@ -11,8 +11,8 @@ const Login = ({ setToken }) => {
     try {
       e.preventDefault();
       const response = await request.post("/api/user/admin", {
-        email,
-        password,
+        email:"majdioa7sh@gmail.com",
+        password:"Majdi@316201987",
       });
       if (response.data.success) {
         setToken(response.data.token);

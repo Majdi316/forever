@@ -24,6 +24,7 @@ connectCloudinary();
 // middlewares
 app.use(express.json());
 
+
 //api endpoints
 
 app.use("/api/user", userRouter);
